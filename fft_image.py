@@ -13,6 +13,7 @@ def get_peak(array):
   ir_1 = axis
   for i in range(0,len(imgarray)):
     if ir_1 < imgarray[i]:
-      ir_1 =imgarray[i]
+      ir_1 = imgarray[i]
+  return ir_1
       
   
