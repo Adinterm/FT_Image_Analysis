@@ -7,8 +7,10 @@ def fft.img(imgpath):
   return fft_img
 
 def get_peak(array):
-  imgarray = array
-  ir_1 = imgarray[0]
+  imgarray = np.array(array)
+  axis = imgarray.shape[1]
+  axis = axis/2
+  ir_1 = axis
   for i in range(0,len(imgarray)):
     if ir_1 < imgarray[i]:
       ir_1 =imgarray[i]
