@@ -110,7 +110,57 @@ def into_range(x, range_min, range_max):
   delta = range_max - range_min
   return (((shiftedx % delta) + delta) % delta) + range_min
 
+def center_rc(img,rc):    #use (image array, [0 = row, 1 = column])
+  peak_ar = np.array(img)
+  edge = peak.shape[rc]
+  edge2 = edge/2
+  if rc == 0:
+    peak_rc = peak_ar[edge2,:]
+  if rc == 1:
+    peak_rc = peak_ar[:,edge2]
+  ir_1 = [0]
+  for i in range(0,len(peak_rc)):
+    if ir_1 < peak_rc[i]
+      ir_1 = peak_rc[i]
+    return ir_1
 
+def get_peak_rc(img,rc):    #use (image array, [0 = row, 1 = column])
+  peak_ar = np.array(img)
+  edge = rc
+  if rc == 0:
+    peak_rc = peak_ar[edge2,:]
+  if rc == 1:
+    peak_rc = peak_ar[:,edge2]
+  ir_1 = [0]
+  for i in range(0,len(peak_rc)):
+    if ir_1 < peak_rc[i]
+      ir_1 = peak_rc[i]
+    return ir_1
+
+def get_peak_rc(img, rc, rc2):
+  peak_ar = np.array(img)
+  if rc == 0:
+    peak_rc = peak_ar[rc2,:]
+  if rc == 1:
+    peak_rc = peak_ar[:,rc2]
+  ir_1 = [0]
+  for i in range(0, len(peak_rc)):
+    if ir_1 < peak_rc[i]
+      ir_1 = peak_rc[i]
+    return ir_1
+
+def get_peak_rc(img):
+  for i in range(0, len(img.shape[0])):
+    get_row = peak_rc(img,0,i)
+  print("Length row = {}".format(len(img.shape[0])))
+  
+  for i in range(0, len(img.shape[1])):
+    get_column = peak_rc(img,1,i)
+  print("Length column = {}".format(len(img.shape[1])))
+  return get_row, get_column
+    
+  
+  
 ##############################################################
 
 if __name__ == "__main__":
