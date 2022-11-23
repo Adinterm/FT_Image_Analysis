@@ -120,7 +120,7 @@ def center_rc(img,rc):    #use (image array, [0 = row, 1 = column])
     peak_rc = peak_ar[:,edge2]
   ir_1 = [0]
   for i in range(0,len(peak_rc)):
-    if ir_1 < peak_rc[i]
+    if ir_1 < peak_rc[i]:
       ir_1 = peak_rc[i]
     return ir_1
 
@@ -133,7 +133,7 @@ def get_peak_rc(img,rc):    #use (image array, [0 = row, 1 = column])
     peak_rc = peak_ar[:,edge2]
   ir_1 = [0]
   for i in range(0,len(peak_rc)):
-    if ir_1 < peak_rc[i]
+    if ir_1 < peak_rc[i]:
       ir_1 = peak_rc[i]
     return ir_1
 
@@ -145,7 +145,7 @@ def get_peak_rc(img, rc, rc2):
     peak_rc = peak_ar[:,rc2]
   ir_1 = [0]
   for i in range(0, len(peak_rc)):
-    if ir_1 < peak_rc[i]
+    if ir_1 < peak_rc[i]:
       ir_1 = peak_rc[i]
     return ir_1
 
